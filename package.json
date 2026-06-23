@@ -7,12 +7,10 @@
     "pnpm": ">=10.0.0"
   },
   "license": "MIT",
-  "main": "dist/index.js",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outfile=dist/index.js",
-    "start": "NODE_ENV=production node dist/index.js",
-    "postbuild": "echo 'Build complete - dist/public contains static files, dist/index.js is the server'",
+    "build": "vite build",
+    "start": "vite preview",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
     "format": "prettier --write ."

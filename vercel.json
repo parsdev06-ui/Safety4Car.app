@@ -1,21 +1,19 @@
 {
   "buildCommand": "pnpm run build",
-  "outputDirectory": "dist",
+  "outputDirectory": "dist/public",
   "installCommand": "pnpm install --frozen-lockfile",
   "env": {
     "NODE_ENV": "production"
   },
-  "functions": {
-    "server/index.ts": {
-      "runtime": "nodejs20.x",
-      "memory": 1024,
-      "maxDuration": 60
-    }
-  },
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
+      "src": "^/(?!.*\\.).*$",
       "destination": "/index.html"
+    },
+    {
+      "src": "/.*",
+      "status": 404,
+      "destination": "/404.html"
     }
   ]
 }
