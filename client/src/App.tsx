@@ -15,6 +15,7 @@ import BookingPackage from "./pages/client/BookingPackage";
 import BookingVehicle from "./pages/client/BookingVehicle";
 import BookingAppointment from "./pages/client/BookingAppointment";
 import CheckoutPreview from "./pages/client/CheckoutPreview";
+import BookingSuccess from "./pages/client/BookingSuccess";
 import CustomerDashboard from "./pages/client/CustomerDashboard";
 import CustomerOrders from "./pages/client/CustomerOrders";
 import CustomerReports from "./pages/client/CustomerReports";
@@ -61,6 +62,7 @@ function Router() {
       <Route path="/booking/vehicle" component={BookingVehicle} />
       <Route path="/booking/appointment" component={BookingAppointment} />
       <Route path="/booking/checkout-preview" component={CheckoutPreview} />
+      <Route path="/booking/success" component={BookingSuccess} />
       <Route path="/customer/dashboard" component={CustomerDashboard} />
       <Route path="/customer/orders/:id" component={CustomerOrders} />
       <Route path="/customer/reports/:id" component={CustomerReports} />

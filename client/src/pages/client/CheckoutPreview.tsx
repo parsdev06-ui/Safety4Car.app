@@ -113,7 +113,7 @@ export default function CheckoutPreview() {
                   <Button variant="outline">Zurück</Button>
                 </a>
               </Link>
-              <Link href="/customer/dashboard">
+              <Link href="/booking/success">
                 <a>
                   <Button className="flex-1">Zahlung abschließen</Button>
                 </a>
