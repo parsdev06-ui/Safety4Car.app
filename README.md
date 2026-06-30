@@ -143,6 +143,76 @@ Alle Daten sind statisch in `/client/src/lib/mock-data.ts` definiert. Es werden 
 
 ---
 
+## Mobile App (Expo React Native)
+
+Die Safety4Car Mobile App befindet sich unter `apps/mobile/`.
+
+### Tech-Stack Mobile
+
+| Technologie       | Zweck                         |
+| ----------------- | ----------------------------- |
+| Expo SDK 57       | React Native Framework        |
+| TypeScript        | Type Safety                   |
+| Expo Router       | File-based Navigation         |
+| NativeWind        | Tailwind CSS for RN           |
+| React Hook Form   | Formulare                     |
+| Zod               | Validierung                   |
+
+### Mobile App starten
+
+```bash
+cd apps/mobile
+npm install
+npx expo start
+```
+
+### iOS Simulator
+
+```bash
+cd apps/mobile
+npm install
+npx expo start --ios
+```
+
+> Voraussetzung: macOS mit Xcode installiert.
+
+### Android Emulator
+
+```bash
+cd apps/mobile
+npm install
+npx expo start --android
+```
+
+> Voraussetzung: Android Studio mit konfiguriertem Emulator.
+
+### EAS Build (Production)
+
+```bash
+npm install -g eas-cli
+eas login
+eas build --platform all
+```
+
+Siehe [App Store Plan](docs/AppStorePlan.md) für Details zum Release-Prozess.
+
+### Mobile App Struktur
+
+```
+apps/mobile/
+  app/
+    (auth)/        # Login, Register
+    (customer)/    # Customer Flow (Dashboard, Booking, Orders, Reports)
+    (inspector)/   # Inspector Flow (Dashboard, Orders, Inspection, Payouts)
+  src/
+    components/    # Shared UI Components
+    lib/           # Mock-Daten
+    types/         # TypeScript Types
+    constants/     # Farben, Tokens
+```
+
+---
+
 ## Nächste Schritte
 
 1. NestJS Backend anbinden
@@ -152,6 +222,8 @@ Alle Daten sind statisch in `/client/src/lib/mock-data.ts` definiert. Es werden 
 5. PDF-Report Generierung
 6. E-Mail Benachrichtigungen
 7. Internationalisierung (i18n)
+8. Mobile App: Backend-Anbindung
+9. Mobile App: EAS Build & Store Release
 
 ---
 
@@ -165,6 +237,8 @@ Weitere Dokumentation befindet sich im `/docs` Verzeichnis:
 - [App Flow](docs/AppFlow.md)
 - [Mock Data](docs/MockData.md)
 - [API Integration Notes](docs/ApiIntegrationNotes.md)
+- [Mobile App Scope](docs/MobileAppScope.md)
+- [App Store Plan](docs/AppStorePlan.md)
 
 ---
 
